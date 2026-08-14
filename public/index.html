@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Market Sentiment Indicator</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="viz-root">
+    <div class="header">
+      <div>
+        <h1>Pre-Market Sentiment Indicator</h1>
+        <div class="subtitle">Direction: NASDAQ &middot; Dow Jones &middot; NSE Advances/Declines &middot; GIFT Nifty &nbsp;|&nbsp; Volatility: India VIX</div>
+      </div>
+      <button id="refresh">Run now</button>
+    </div>
+
+    <div class="hero" id="hero">
+      <div class="hero-dot neutral" id="hero-dot"></div>
+      <div>
+        <div class="hero-value" id="hero-value">Loading&hellip;</div>
+        <div class="hero-meta" id="hero-meta"></div>
+      </div>
+      <div class="hero-timestamp" id="hero-timestamp"></div>
+    </div>
+
+    <div class="tiles" id="tiles"></div>
+
+    <h2>History</h2>
+    <table id="history-table">
+      <thead>
+        <tr>
+          <th>Time (IST)</th>
+          <th>Direction</th>
+          <th>Volatility</th>
+          <th>NASDAQ</th>
+          <th>Dow</th>
+          <th>NSE A/D</th>
+          <th>GIFT Nifty</th>
+          <th>VIX</th>
+        </tr>
+      </thead>
+      <tbody id="history-body"></tbody>
+    </table>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
