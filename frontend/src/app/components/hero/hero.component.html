@@ -1,0 +1,9 @@
+<div class="hero" id="hero">
+  <div class="hero-ring" id="hero-ring" [style.background]="ringBackground">
+    <div class="hero-ring-inner" [ngClass]="ringInnerClass" id="hero-ring-inner" [innerHTML]="ringInnerIcon"></div>
+  </div>
+  <div class="hero-body">
+    <div class="hero-value" [ngClass]="valueClass" id="hero-value">{{ valueText }}</div>
+    <div class="hero-meta" id="hero-meta" [innerHTML]="metaHtml"></div>
+  </div>
+</div>

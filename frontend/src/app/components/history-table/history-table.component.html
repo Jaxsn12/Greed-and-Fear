@@ -1,0 +1,29 @@
+<div class="history-card">
+  <div class="history-header">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2" stroke-linecap="round"/></svg>
+    History
+  </div>
+  <table id="history-table">
+    <thead>
+      <tr>
+        <th>Time (IST)</th>
+        <th>Direction</th>
+        <th>Volatility</th>
+        <th>NASDAQ</th>
+        <th>Dow</th>
+        <th>NSE A/D</th>
+        <th>GIFT Nifty</th>
+        <th>VIX</th>
+      </tr>
+    </thead>
+    <tbody id="history-body">
+      <tr *ngFor="let row of rows">
+        <td>{{ row.time }}</td>
+        <td><span class="row-direction" [ngClass]="row.dirCls"><span class="dot"></span>{{ row.dirText }}</span></td>
+        <td><span class="row-volatility"><span class="dot"></span>{{ row.volText }}</span></td>
+        <td *ngFor="let cell of row.cells"><span class="vote-icon" [ngClass]="cell.cls" [innerHTML]="cell.icon"></span></td>
+        <td class="num">{{ row.vixText }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,10 @@
+<div class="tiles" id="tiles" *ngIf="run">
+  <div class="tile" *ngFor="let t of tiles" [class.error]="!t.ok">
+    <div class="tile-label">
+      <span class="tile-icon" [ngClass]="t.iconClass" [innerHTML]="t.icon"></span>
+      {{ t.label }}
+    </div>
+    <div class="tile-value" [ngClass]="t.valueClass">{{ t.value }}</div>
+    <div class="tile-sub">{{ t.sub }}</div>
+  </div>
+</div>
