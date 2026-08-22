@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiBase: ''
+  apiBase: 'greed-and-fear-9g2c.vercel.app'
 };
