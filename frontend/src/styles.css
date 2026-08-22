@@ -378,6 +378,7 @@ button#theme-toggle:hover { background: var(--gridline); }
   box-shadow: var(--shadow);
   border-radius: 16px;
   padding: 24px 24px 8px;
+  overflow-x: auto;
 }
 .history-header {
   display: flex;
@@ -392,6 +393,7 @@ button#theme-toggle:hover { background: var(--gridline); }
 
 table {
   width: 100%;
+  min-width: 620px;
   border-collapse: collapse;
   font-size: 13px;
 }
@@ -434,3 +436,40 @@ td.num { font-variant-numeric: tabular-nums; }
 .vote-icon.bullish { background: var(--icon-green-bg); color: var(--icon-green-fg); }
 .vote-icon.bearish { background: var(--icon-red-bg); color: var(--icon-red-fg); }
 .vote-icon.neutral { background: var(--icon-neutral-bg); color: var(--icon-neutral-fg); }
+
+/* ---------- Responsive: tablet ---------- */
+@media (max-width: 900px) {
+  .app-bar { padding: 14px 20px; }
+  .content { padding: 0 20px; }
+  .hero { padding: 22px; gap: 18px; }
+  .tiles { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
+}
+
+/* ---------- Responsive: mobile ---------- */
+@media (max-width: 640px) {
+  .app-bar { flex-wrap: wrap; row-gap: 8px; padding: 12px 16px; }
+  .brand-text-tagline { display: none; }
+  .app-bar-actions { gap: 8px; }
+  button#refresh { padding: 8px 12px; font-size: 12px; }
+
+  .content { padding: 0 16px; }
+  .title-row { margin-bottom: 18px; }
+  .title-row h1 { font-size: 19px; gap: 6px; }
+  .title-row h1 .info-icon { width: 14px; height: 14px; }
+  .subtitle { font-size: 12px; }
+  .last-run-pill { font-size: 11px; padding: 7px 12px; }
+
+  .hero { padding: 18px; gap: 16px; margin-bottom: 18px; }
+  .hero-ring { width: 72px; height: 72px; }
+  .hero-ring-inner { width: 54px; height: 54px; }
+  .hero-ring-inner svg { width: 24px; height: 24px; }
+  .hero-value { font-size: 22px; }
+  .hero-meta { font-size: 12px; }
+
+  .tiles { grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px; margin-bottom: 24px; }
+  .tile { padding: 14px; }
+  .tile-value { font-size: 19px; }
+
+  .history-card { padding: 16px 16px 8px; }
+  th, td { padding: 10px 10px; }
+}
